@@ -1,0 +1,49 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    background: rgb(18, 19, 23);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.container .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 50px;
+    border-radius: 20px;
+    background: rgba(68, 70, 84, 0.929);
+    cursor: pointer;
+}
+.container .input .mic {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    
+}
+.container .input .talk i {
+    font-size: 20px;
+}
+  
+.container .input .content {
+    color: #cfcfcf;
+    font-size: 16px;
+    margin-right: 20px;
+}
