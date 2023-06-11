@@ -1,5 +1,5 @@
-const API_KEY = "YOUR OPENAI API_KEY";
-
+let API_KEY = "YOUR OPENAI API_KEY";
+// const api = document.querySelector('input');
 const microphone = document.querySelector('.input');
 const content = document.querySelector('.content');
 
@@ -36,6 +36,7 @@ function wishMe() {
 window.addEventListener('load', ()=>{
     speak("Going online");
     wishMe();
+    speak("Please Paste Your OpenAI API key ");
 })
 
 
@@ -52,9 +53,16 @@ recognition.onresult = (event) => {
     fetchData(transcript)
 }
 
+const apiKeyInput = document.getElementById("api-key");
+apiKeyInput.addEventListener("input", function(event) {
+    const apiKeyValue = event.target.value;
+    API_KEY = apiKeyValue;
+})
+    
 // event listener
 microphone.addEventListener('click', ()=>{
-    console.log('click')
+
+    console.log(API_KEY);
     recognition.start();
 })
 
